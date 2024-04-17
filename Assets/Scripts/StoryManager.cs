@@ -183,6 +183,24 @@ public class StoryManager : MonoBehaviour
             story.Add("Then come on!");
             isKomo.Add(true);
         }
+        //Act 2 Begin
+        else if (storyPart == 6) 
+        {
+            story.Add("Is there anywhere in particular you wanna go?");
+            isKomo.Add(true);
+
+            story.Add("Let me think...");
+            isKomo.Add(false); 
+        }
+        // Decision made
+        else if (storyPart == 7)
+        {
+            story.Add("Let's go here.");
+            isKomo.Add(false);
+
+            story.Add("Sure!");
+            isKomo.Add(true);
+        }
 
         inStory = true;
         storyText.text = story[0];
