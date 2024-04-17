@@ -126,6 +126,81 @@ public class StoryManager : MonoBehaviour
             story.Add("Alright! Let's go!");
             isKomo.Add(true);
         }
+        //Piggy Costume
+        else if (storyPart == 4)
+        {
+            story.Add("I got a surprise in our room.");
+            isKomo.Add(true);
+
+            story.Add("Ok, what's going on here?");
+            isKomo.Add(false);
+
+            story.Add("Heya there!");
+            isKomo.Add(true);
+
+            story.Add("What's with that costume? I need to get-");
+            isKomo.Add(false);
+
+            story.Add("Wanna dance? It'll be fun!");
+            isKomo.Add(true);
+
+            story.Add("Fine.");
+            isKomo.Add(false);
+
+            story.Add("Get your frustrations outta your system?");
+            isKomo.Add(true);
+
+            story.Add("A little. I think getting away might help.");
+            isKomo.Add(false);
+
+            story.Add("Sure.");
+            isKomo.Add(true);
+        }
+        //Banana Costume
+        else if (storyPart == 5)
+        {
+            story.Add("I wanna show you something.");
+            isKomo.Add(true);
+
+            story.Add("Alright then.");
+            isKomo.Add(false);
+
+            story.Add("Sup with the outfit?");
+            isKomo.Add(false);
+
+            story.Add("I'm a banana! Peanut butter jelly time!");
+            isKomo.Add(true);
+
+            story.Add("Not interested. Sorry.");
+            isKomo.Add(false);
+
+            story.Add("Aw man. And I was hoping to ease your saddness.");
+            isKomo.Add(true);
+
+            story.Add("That obvious, huh? Well, I might be open to a romp outside.");
+            isKomo.Add(false);
+
+            story.Add("Then come on!");
+            isKomo.Add(true);
+        }
+        //Act 2 Begin
+        else if (storyPart == 6) 
+        {
+            story.Add("Is there anywhere in particular you wanna go?");
+            isKomo.Add(true);
+
+            story.Add("Let me think...");
+            isKomo.Add(false); 
+        }
+        // Decision made
+        else if (storyPart == 7)
+        {
+            story.Add("Let's go here.");
+            isKomo.Add(false);
+
+            story.Add("Sure!");
+            isKomo.Add(true);
+        }
 
         inStory = true;
         storyText.text = story[0];
