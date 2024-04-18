@@ -192,7 +192,7 @@ public class StoryManager : MonoBehaviour
             story.Add("Let me think...");
             isKomo.Add(false); 
         }
-        //Decision made
+        //Decision made - Act 2
         else if (storyPart == 7)
         {
             story.Add("Let's go here.");
@@ -344,6 +344,160 @@ public class StoryManager : MonoBehaviour
 
             story.Add("I'm down.");
             isKomo.Add(true);
+        }
+        //Act 3 Begin
+        else if (storyPart == 12)
+        {
+            story.Add("So, has this day gotten any better for you?");
+            isKomo.Add(true);
+
+            story.Add("Yeah. It has.");
+            isKomo.Add(false);
+
+            story.Add("Where do you wanna eat?");
+            isKomo.Add(true);
+
+            story.Add("Let's see...I wanna head there.");
+            isKomo.Add(false);
+
+        }
+        //Decision made - Act 3
+        else if (storyPart == 13)
+        {
+            sotry.Add("Alright, I'm starving.");
+            isKomo.Add(true);
+        }
+        //Pizza Place
+        else if (storyPart == 14)
+        {
+            story.Add("This is some good pizza!");
+            isKomo.Add(true);
+
+            story.Add("The sauce and cheese taste great.");
+            isKomo.Add(false);
+
+            story.Add("Yeah. I could probably wat this every day!");
+            isKomo.Add(true);
+
+            story.Add("You'll get fat.");
+            isKomo.Add(false);
+
+            story.Add("Bruh. Leave me alone man.");
+            isKomo.Add(true);
+
+            story.Add("Hahahaha!");
+            isKomo.Add(false);
+        }
+        //Mexican Joint
+        else if (storyPart == 15)
+        {
+            story.Add("You got a torta?");
+            isKomo.Add(true);
+
+            story.Add("Yeah, wanted to try something different.");
+            isKomo.Add(false);
+
+            story.Add("That's the birria quesadilla, right?");
+            isKomo.Add(false);
+
+            story.Add("Yeah man, how could I not?");
+            isKomo.Add(true);
+
+            story.Add("Kinda feels typical.");
+            isKomo.Add(false);
+
+            story.Add("Eaaangh, whatever.");
+            isKomo.Add(true);
+        }
+        //Smoothie Shack
+        else if (storyPart == 16)
+        {
+            story.Add("Got a nice fruit blend.");
+            isKomo.Add(false);
+
+            story.Add("Neat! I got a peanut butter/banana/nutella blend.");
+            isKomo.Add(true);
+
+            story.Add("See that sweet tooth of yours is still strong.");
+            isKomo.Add(false);
+
+            story.Add("Well, sweet things are nice!");
+            isKomo.Add(true);
+
+            story.Add("Understandable, just watch yourself.");
+            isKomo.Add(false);
+
+            story.Add("Okay, mom.");
+            isKomo.Add(true);
+        }
+        //Bakery
+        else if (storyPart == 17)
+        {
+            story.Add("Alright, here we are. The bakery.");
+            isKomo.Add(false);
+
+            story.Add("YEAH! Let's grab some-");
+            isKomo.Add(true);
+
+            story.Add("Control yourself. Remember last time?");
+            isKomo.Add(false);
+
+            story.Add("Ah, right. I'll ease up. Just getting the smothered donuts.");
+            isKomo.Add(true);
+
+            story.Add("Just trying to make sure you're not going too far.");
+            isKomo.Add(false);
+
+            story.Add("While we wait...");
+            isKomo.Add(false);
+        }
+        //End
+        else
+        {
+            story.Add("What's been happening?");
+            isKomo.Add(true)
+
+            story.Add("You don't have to tell me if you don't find it comfortable, but-");
+            isKomo.Add(true)
+
+            story.Add("Nah, I owe you enough for my day.");
+            isKomo.Add(false);
+
+            story.Add("So in sum...I got fired.");
+            isKomo.Add(false);
+
+            story.Add("What happened?");
+            isKomo.Add(true)
+
+            story.Add("I was just working as usual and got called to the boss's office.");
+            isKomo.Add(false);
+
+            story.Add("He said that he was restructuring and said there wan't any room for me or some of the other veterans.");
+            isKomo.Add(false);
+
+            story.Add("That sucks, man.");
+            isKomo.Add(true);
+
+            story.Add("So...have you been doing well?");
+            isKomo.Add(true);
+
+            story.Add("I've mostly beed looking for and getting rejected by various job offers.");
+            isKomo.Add(false);
+
+            story.Add("Ouch. Maybe you should just take it easy and wait a bit.");
+            isKomo.Add(true)
+
+            story.Add("You're more than just your job skills, ya know.");
+            isKomo.Add(true);
+
+            story.Add("Thanks. I think I'll do just that.");
+            isKomo.Add(false);
+
+            story.Add("Now, let's keep eating.");
+            isKomo.Add(true);
+
+            story.Add("Yeah.");
+            isKomo.Add(false);
         }
         inStory = true;
         storyText.text = story[0];
