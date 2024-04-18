@@ -273,7 +273,78 @@ public class StoryManager : MonoBehaviour
             story.Add("Let's grab a bite.");
             isKomo.Add(false);
         }
+        //Forest Trail
+        else if (storyPart == 10)
+        {
+            story.Add("Wanted to do something relaxing.");
+            isKomo.Add(false);
 
+            story.Add("Okay, I like this.");
+            isKomo.Add(true);
+
+            story.Add("Huh, what's that?");
+            isKomo.Add(false);
+
+            story.Add("Look at that view!");
+            isKomo.Add(true);
+
+            story.Add("Woah. It's beautiful.");
+            isKomo.Add(false);
+
+            story.Add("Yes. Let's grab a seat.");
+            isKomo.Add(true);
+
+            story.Add("That was nice. Now, let's get outta here. I'm starving.");
+            isKomo.Add(false);
+
+            story.Add("I couldn't agree more.");
+            isKomo.Add(true);
+        }
+        //Mall
+        else if (storyPart == 11)
+        {
+            story.Add("Okay, we're here.");
+            isKomo.Add(true);
+
+            story.Add("I wanna get some comics.");
+            isKomo.Add(false);
+
+            story.Add("Okay, let's go!");
+            isKomo.Add(true);
+
+            story.Add("Wait. It says here that the comics are sold out. "Well that was a bust."");
+            isKomo.Add(false);
+
+            story.Add("Sorry, buddy. I wish I knew beforehand that they were sold out.");
+            isKomo.Add(true);
+
+            story.Add("It's not your fault.");
+            isKomo.Add(false);
+
+            story.Add("Wanna do something else?");
+            isKomo.Add(true);
+
+            story.Add("Let's head for the sneakers stores.");
+            isKomo.Add(false);
+
+            story.Add("You want anything?");
+            isKomo.Add(true);
+
+            story.Add("There's a new set I want that supports a good cause.");
+            isKomo.Add(false);
+
+            story.Add("Time for some kicks!");
+            isKomo.Add(true);
+
+            story.Add("We got em! How are they?"");
+            isKomo.Add(true);
+
+            story.Add("Worth it. Now, let's grab a bite.");
+            isKomo.Add(false);
+
+            story.Add("I'm down.");
+            isKomo.Add(true);
+        }
         inStory = true;
         storyText.text = story[0];
         index = -1;
