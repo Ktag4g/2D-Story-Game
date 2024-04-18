@@ -17,6 +17,9 @@ public class StoryManager : MonoBehaviour
     public Color steveColor;
 
     public GameObject gameUI;
+    public GameObject Act2Buttons;
+    public GameObject Act3Buttons;
+    public GameObject GameEndScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -46,18 +49,47 @@ public class StoryManager : MonoBehaviour
     {
         if (index + 1 < story.Count)
         {
-            storyText.text = story[index + 1];
-            if (isKomo[index + 1])
+            //Starts Act 2
+            if(story[index + 1] == "[ACT 2 START]")
             {
-                storyText.color = komoColor;
-                storyText.alignment = TextAlignmentOptions.Left;
+                UpdateStory(6);
+            }
+            else if(story[index + 1] == "[ACT 2 CHOICE]")
+            {
+                Act2Buttons.SetActive(true);
+            }
+            else if (story[index + 1] == "[ACT 3 START]")
+            {
+                UpdateStory(12);
+            }
+            else if (story[index + 1] == "[ACT 3 CHOICE]")
+            {
+                Act3Buttons.SetActive(true);
+            }
+            else if (story[index + 1] == "[ENDING]")
+            {
+                UpdateStory(18);
+            }
+            else if (story[index + 1] == "[END GAME]")
+            {
+                GameEndScreen.SetActive(true);
             }
             else
             {
-                storyText.color = steveColor;
-                storyText.alignment = TextAlignmentOptions.Right;
+                storyText.text = story[index + 1];
+                if (isKomo[index + 1])
+                {
+                    storyText.color = komoColor;
+                    storyText.alignment = TextAlignmentOptions.Left;
+                }
+                else
+                {
+                    storyText.color = steveColor;
+                    storyText.alignment = TextAlignmentOptions.Right;
+                }
+                index++;
             }
-            index++;
+
         }
         else
         {
@@ -104,6 +136,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Sweet! Let's get our things!");
             isKomo.Add(true);
+
+            story.Add("[ACT 2 START]");
         }
         //Superhero Costume
         else if (storyPart == 3)
@@ -125,6 +159,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Alright! Let's go!");
             isKomo.Add(true);
+
+            story.Add("[ACT 2 START]");
         }
         //Piggy Costume
         else if (storyPart == 4)
@@ -155,6 +191,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Sure.");
             isKomo.Add(true);
+
+            story.Add("[ACT 2 START]");
         }
         //Banana Costume
         else if (storyPart == 5)
@@ -182,7 +220,10 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Then come on!");
             isKomo.Add(true);
+
+            story.Add("[ACT 2 START]");
         }
+        
         //Act 2 Begin
         else if (storyPart == 6) 
         {
@@ -190,9 +231,11 @@ public class StoryManager : MonoBehaviour
             isKomo.Add(true);
 
             story.Add("Let me think...");
-            isKomo.Add(false); 
+            isKomo.Add(false);
+
+            story.Add("[ACT 2 CHOICE]");
         }
-        //Decision made - Act 2
+        // Decision made
         else if (storyPart == 7)
         {
             story.Add("Let's go here.");
@@ -230,6 +273,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("*pant* *pant*" + "Tense. but fun. now I'm hungry.");
             isKomo.Add(false);
+
+            story.Add("[ACT 3 START]");
         }
         //Arcade
         else if (storyPart == 9)
@@ -272,6 +317,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Let's grab a bite.");
             isKomo.Add(false);
+
+            story.Add("[ACT 3 START]");
         }
         //Forest Trail
         else if (storyPart == 10)
@@ -299,6 +346,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("I couldn't agree more.");
             isKomo.Add(true);
+
+            story.Add("[ACT 3 START]");
         }
         //Mall
         else if (storyPart == 11)
@@ -336,7 +385,7 @@ public class StoryManager : MonoBehaviour
             story.Add("Time for some kicks!");
             isKomo.Add(true);
 
-            story.Add("We got em! How are they?"");
+            story.Add("We got em! How are they?");
             isKomo.Add(true);
 
             story.Add("Worth it. Now, let's grab a bite.");
@@ -344,7 +393,10 @@ public class StoryManager : MonoBehaviour
 
             story.Add("I'm down.");
             isKomo.Add(true);
+
+            story.Add("[ACT 3 START]");
         }
+        
         //Act 3 Begin
         else if (storyPart == 12)
         {
@@ -360,11 +412,12 @@ public class StoryManager : MonoBehaviour
             story.Add("Let's see...I wanna head there.");
             isKomo.Add(false);
 
+            story.Add("[ACT 3 CHOICE]");
         }
         //Decision made - Act 3
         else if (storyPart == 13)
         {
-            sotry.Add("Alright, I'm starving.");
+            story.Add("Alright, I'm starving.");
             isKomo.Add(true);
         }
         //Pizza Place
@@ -387,6 +440,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Hahahaha!");
             isKomo.Add(false);
+
+            story.Add("[ENDING]");
         }
         //Mexican Joint
         else if (storyPart == 15)
@@ -408,6 +463,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Eaaangh, whatever.");
             isKomo.Add(true);
+            
+            story.Add("[ENDING]");
         }
         //Smoothie Shack
         else if (storyPart == 16)
@@ -429,6 +486,8 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Okay, mom.");
             isKomo.Add(true);
+
+            story.Add("[ENDING]");
         }
         //Bakery
         else if (storyPart == 17)
@@ -450,15 +509,18 @@ public class StoryManager : MonoBehaviour
 
             story.Add("While we wait...");
             isKomo.Add(false);
+
+            story.Add("[ENDING]");
         }
+        
         //End
-        else
+        else if (storyPart == 18)
         {
             story.Add("What's been happening?");
-            isKomo.Add(true)
+            isKomo.Add(true);
 
             story.Add("You don't have to tell me if you don't find it comfortable, but-");
-            isKomo.Add(true)
+            isKomo.Add(true);
 
             story.Add("Nah, I owe you enough for my day.");
             isKomo.Add(false);
@@ -467,7 +529,7 @@ public class StoryManager : MonoBehaviour
             isKomo.Add(false);
 
             story.Add("What happened?");
-            isKomo.Add(true)
+            isKomo.Add(true);
 
             story.Add("I was just working as usual and got called to the boss's office.");
             isKomo.Add(false);
@@ -485,7 +547,7 @@ public class StoryManager : MonoBehaviour
             isKomo.Add(false);
 
             story.Add("Ouch. Maybe you should just take it easy and wait a bit.");
-            isKomo.Add(true)
+            isKomo.Add(true);
 
             story.Add("You're more than just your job skills, ya know.");
             isKomo.Add(true);
@@ -498,7 +560,10 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Yeah.");
             isKomo.Add(false);
+
+            story.Add("[END GAME]");
         }
+
         inStory = true;
         storyText.text = story[0];
         index = -1;

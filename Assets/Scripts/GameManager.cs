@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,10 +22,24 @@ public class GameManager : MonoBehaviour
             gameUI.SetActive(true);
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void StartGame()
     {
-        
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        #if UNITY_STANDALONE
+        Application.Quit();
+        #endif
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }

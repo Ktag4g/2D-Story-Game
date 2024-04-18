@@ -32,19 +32,9 @@ public class clickDetect : MonoBehaviour
                 clickManager.closetClick();
             }
 
-            if (gameObject.tag == "Piggie")
-            {
-                clickManager.piggieClick();
-            }
-
             if (gameObject.tag == "Friend")
             {
                 clickManager.friendClick();
-            }
-
-            if (gameObject.tag == "Table")
-            {
-                clickManager.tableClick();
             }
         }
     }
