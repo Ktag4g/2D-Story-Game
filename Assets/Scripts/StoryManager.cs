@@ -192,7 +192,7 @@ public class StoryManager : MonoBehaviour
             story.Add("Let me think...");
             isKomo.Add(false); 
         }
-        // Decision made
+        //Decision made
         else if (storyPart == 7)
         {
             story.Add("Let's go here.");
@@ -200,6 +200,78 @@ public class StoryManager : MonoBehaviour
 
             story.Add("Sure!");
             isKomo.Add(true);
+        }
+        //Amusement Park
+        else if (storyPart == 8)
+        {
+            story.Add("Which ride do you wanna get on first?");
+            isKomo.Add(true);
+
+            story.Add("I dunno. maybe...the merry-go-round?");
+            isKomo.Add(false);
+
+            story.Add("We can do the merry-go-round.");
+            isKomo.Add(true);
+
+            story.Add("So? How was it?");
+            isKomo.Add(true);
+
+            story.Add("Eh, gonna need another ride.");
+            isKomo.Add(false);
+
+            story.Add("Sure!");
+            isKomo.Add(true);
+
+            story.Add("Okay. Let's try your idea then.");
+            isKomo.Add(false);
+
+            story.Add("Wooo! Now how was that?");
+            isKomo.Add(true);
+
+            story.Add("*pant* *pant*" + "Tense. but fun. now I'm hungry.");
+            isKomo.Add(false);
+        }
+        //Arcade
+        else if (storyPart == 9)
+        {
+            story.Add("Anything you wanna do first?");
+            isKomo.Add(true);
+
+            story.Add("Let's try out some skee ball to get started.");
+            isKomo.Add(false);
+
+            story.Add("Sure! But I'm pretty good, ya know?");
+            isKomo.Add(true);
+
+            story.Add("Last time we played, not so much.");
+            isKomo.Add(false);
+
+            story.Add("I-er...Let's just play.");
+            isKomo.Add(true);
+
+            story.Add("Haha! I win!");
+            isKomo.Add(true);
+
+            story.Add("Okay, you finally won. That's 1-5 though.");
+            isKomo.Add(false);
+
+            story.Add("Aaargh! Basketball next?");
+            isKomo.Add(true);
+
+            story.Add("You're on.");
+            isKomo.Add(false);
+
+            story.Add("Aww.");
+            isKomo.Add(true);
+
+            story.Add("Heh, I'm starting to have fun. Thanks.");
+            isKomo.Add(false);
+
+            story.Add("You're welcome. But now I'm hungry.");
+            isKomo.Add(true);
+
+            story.Add("Let's grab a bite.");
+            isKomo.Add(false);
         }
 
         inStory = true;
