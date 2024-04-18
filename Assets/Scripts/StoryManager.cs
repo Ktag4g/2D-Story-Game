@@ -312,7 +312,7 @@ public class StoryManager : MonoBehaviour
             story.Add("Okay, let's go!");
             isKomo.Add(true);
 
-            story.Add("Wait. It says here that the comics are sold out. "Well that was a bust."");
+            story.Add("Wait. It says here that the comics are sold out. Well that was a bust.");
             isKomo.Add(false);
 
             story.Add("Sorry, buddy. I wish I knew beforehand that they were sold out.");
